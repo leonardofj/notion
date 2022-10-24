@@ -1,6 +1,8 @@
 <script>
+   var url = window.location.href;
+   var captured = /currency=([^&]+)/.exec(url)[1]; // Value is in [1] ('384' in our case)
    var fm = "EUR";
-   var to = "JPY";
+   var to = captured ? captured : "EUR";
    var tz = "timezone";
    var sz = "1x127";
    var lg = "en";
